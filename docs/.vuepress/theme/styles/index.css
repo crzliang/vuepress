@@ -2,6 +2,10 @@
     font-family: 'LogoFont'; /* 自定义字体的名称 */
     src: url('/font/segoesc.ttf') format('truetype'); /* TTF字体文件的路径 */
 }
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('/font/Pacifico-Regular.ttf') format('truetype');
+}
 /*颜色*/
 :root {
     /*主页 卡片背景*/
@@ -39,7 +43,7 @@
 }
 
 .vp-navbar-title span{
-    font-family: LogoFont, serif;
+    font-family: Pacifico-Regular, serif;
     font-weight: bolder;
     font-size: 1.4rem;
 }
