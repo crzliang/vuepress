@@ -37,7 +37,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: '/avatar.webp',
+    avatar: '/avatar.png',
     name: 'Crzliang',
     description: '',
     circle: true,
