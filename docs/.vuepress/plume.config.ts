@@ -6,7 +6,7 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: './favicon.ico', // 站点图标
+  logo: 'favicon.ico', // 站点图标
 
   appearance: true,  // 配置 深色模式
 
@@ -37,7 +37,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/basic/#profile
    */
   profile: {
-    avatar: './avatar.webp',
+    avatar: '/avatar.webp',
     name: 'Crzliang',
     description: '',
     circle: true,
