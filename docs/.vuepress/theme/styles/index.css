@@ -1,12 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @font-face {
-    font-family: 'LogoFont'; /* 自定义字体的名称 */
-    src: url('/font/segoesc.ttf') format('truetype'); /* TTF字体文件的路径 */
+    font-family: 'segoesc';
+    src: url('https://img.crzliang.cn/fonts/segoesc.ttf') format('truetype');
 }
-@font-face {
-    font-family: 'Pacifico-Regular';
-    src: url('/font/Pacifico-Regular.ttf') format('truetype');
-}
-/*颜色*/
+
 :root {
     /*主页 卡片背景*/
     --main-card-background: rgba(255, 255, 255, 0.8);
@@ -43,7 +40,7 @@
 }
 
 .vp-navbar-title span{
-    font-family: 'Pacifico-Regular' , cursive;
+    font-family: 'segoesc' , Pacifico;
     font-weight: bolder;
     font-size: 1.4rem;
 }
