@@ -11,6 +11,24 @@ export default defineUserConfig({
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: 'favicon.ico' }],
+    ['script', {
+      charset: 'UTF-8',
+      id: 'LA_COLLECT',
+      src: '//sdk.51.la/js-sdk-pro.min.js'
+    }],
+    [
+      'script',
+      {},
+      "LA.init({id:\"KXZdXhZjKmKpaYiR\",ck:\"KXZdXhZjKmKpaYiR\"})"
+    ],
+    [
+      'script',
+      {
+        defer: true,
+        src: 'https://tongji.crzliang.cn/script.js',
+        'data-website-id': 'a2fc5732-e8c8-4ae1-9805-e88c618eee30'
+      }
+    ]
   ],
 
   bundler: viteBundler(),

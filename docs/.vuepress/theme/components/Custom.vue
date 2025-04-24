@@ -1,15 +1,6 @@
 <template>
   <div class="container">
     <canvas ref="canvasRef"></canvas>
-    <!-- <div class="head-social">
-      <a href="https://github.com/zhenghaoyang24" target="_blank" class="head-social-btn">
-        <icon name="mdi:github"/>
-      </a>
-      <router-link to="/blog/" class="head-social-avatar"><img src="/avatar.jpg" alt="avatar"></router-link>
-      <a href="mailto:zhenghaoyang24@foxmail.com" target="_blank" class="head-social-btn">
-        <icon class="head-social-btn" name="ic:baseline-email"></icon>
-      </a>
-    </div> -->
     <div class="about-me">
       <div class="about-me-3-2-row">
         <router-link to="/blog/" class="name-link">
@@ -26,8 +17,8 @@
         </AboutMeText>
       </div>
       <div class="about-me-3-2-row">
-        <AboutMeSkill/>
-        <AboutMeLife/>
+        <AboutMeSkill />
+        <AboutMeLife />
       </div>
       <div class="about-me-1-1-row">
         <AboutMeText>
@@ -40,10 +31,10 @@
             </slot>
           </template>
         </AboutMeText>
-        <AboutMeCharacter/>
+        <AboutMeCharacter />
       </div>
       <div class="about-me-1-row">
-        <AboutMeFriendLink/>
+        <AboutMeFriendLink />
       </div>
     </div>
   </div>
@@ -63,7 +54,8 @@ canvas {
   position: fixed;
   top: -1px;
   left: -1px;
-  pointer-events: none; /* 允许鼠标事件穿透 */
+  pointer-events: none;
+  /* 允许鼠标事件穿透 */
   overflow: hidden;
 }
 
@@ -103,6 +95,7 @@ canvas {
   max-width: 1380px;
   margin: 0 auto;
   width: 90%;
+
   @media screen and (max-width: 770px) {
     width: 94%;
   }
@@ -113,6 +106,7 @@ canvas {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 20px;
+
   @media screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
@@ -125,6 +119,7 @@ canvas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+
   @media screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
@@ -136,18 +131,17 @@ canvas {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+
   @media screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
 }
-
-
 </style>
 
 
 <script setup lang="ts">
-import {ref, onMounted, onUnmounted} from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import AboutMeName from "./AboutMeName.vue";
 import AboutMeText from "./AboutMeText.vue";
 import AboutMeSkill from "./AboutMeSkill.vue";
@@ -238,8 +232,8 @@ const drawGrid = () => {
 const createComet = () => {
   const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical'
   const maxPosition = direction === 'horizontal'
-      ? Math.floor(window.innerHeight / linesGap)
-      : Math.floor(window.innerWidth / linesGap)
+    ? Math.floor(window.innerHeight / linesGap)
+    : Math.floor(window.innerWidth / linesGap)
 
   const position = Math.floor(Math.random() * maxPosition) * linesGap
 
@@ -257,7 +251,7 @@ const drawComet = (comet: Comet) => {
   if (!context || !canvas) return
 
   const length = 80
-  const {direction, position, progress} = comet
+  const { direction, position, progress } = comet
 
   if (direction === 'horizontal') {
     const x = progress * canvas.width
@@ -318,5 +312,3 @@ onUnmounted(() => {
   cancelAnimationFrame(animationFrameId)
 })
 </script>
-
-
