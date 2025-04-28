@@ -165,7 +165,7 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/guide/features/comments/
      */
     comment: {
-      provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+      provider: 'Twikoo', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
       comment: true,
       envId: 'https://twikoo.a1pha.cn',
       // repo: '',
